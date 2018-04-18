@@ -15,7 +15,7 @@ build_script:
 test_script:
     - ps: |
         Import-Module .\Greet.psm1 -Force
-        Update-MarkdownHelp -Path .\docs
+        Update-MarkdownHelp -Path .\docs -Force
         $diff = git diff
         if ($diff) {
             throw "Help is not up-to-date"
