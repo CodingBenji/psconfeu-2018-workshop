@@ -8,6 +8,9 @@ install:
 build_script:
     - ps: |
         # TODO: create external help in en-US folder
+        $ErrorActionPreference = 'Stop' 
+        Update-Help # we need up-to-date help content for tests 
+
 
 test_script:
     - ps: |
